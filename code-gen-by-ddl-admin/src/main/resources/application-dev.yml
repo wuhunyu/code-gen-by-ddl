@@ -1,0 +1,54 @@
+server:
+  port: 9000
+
+# 系统配置属性
+system-property:
+  # 流量限制
+  limit: 50
+
+# 模板生成相关配置
+codegenbyddl:
+  template:
+    # 是否启用(true: 启用; false: 禁用)
+    enabled: true
+    # 模板所在位置
+    location: code-template
+  # 类型映射 数据库类型 -> Java 类型
+  mapping: {
+    "tinyint": "Integer",
+    "smallint": "Integer",
+    "int": "Integer",
+    "bigint": "Long",
+    "char": "String",
+    "varchar": "String",
+    "datetime": "LocalDateTime",
+    "date": "LocalDate",
+    "timestamp": "LocalDateTime",
+    "decimal": "BigDecimal",
+    "text": "String",
+    "json": "String"
+  }
+  # 默认属性配置
+  configuration:
+    # 包名
+    package-name: top.wuhunyu
+    # 模块名称
+    module-name: demo
+    # 作者名称
+    author-name: wuhunyu
+    # 表前缀
+    table-prefix:
+    # 创建日期格式
+    create-date-format: yyyy/MM/dd HH:mm
+    # 字段格式化日期格式
+    date-format: yyyy-MM-dd HH:mm:ss
+    # 日期类型
+    date-types:
+      - datetime
+      - date
+      - timestamp
+    # 默认生成的模板名称
+    default-template: mybatis-plus
+    # 可用的模板名称
+    available-templates:
+      - mybatis-plus

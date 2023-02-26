@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>top.wuhunyu</groupId>
+    <artifactId>code-gen-by-ddl</artifactId>
+    <packaging>pom</packaging>
+    <version>0.9</version>
+    <modules>
+        <module>code-gen-by-ddl-core</module>
+        <module>code-gen-by-ddl-sqlparse</module>
+        <module>code-gen-by-ddl-template</module>
+        <module>code-gen-by-ddl-admin</module>
+    </modules>
+
+    <developers>
+        <developer>
+            <name>wuhunyu</name>
+            <email>1632766060@qq.com</email>
+        </developer>
+    </developers>
+
+    <properties>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+
+        <spring-boot.version>2.7.6</spring-boot.version>
+        <hutool.version>5.8.12</hutool.version>
+        <druid.version>1.2.15</druid.version>
+        <freemarker.version>2.3.31</freemarker.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- spring-boot 依赖版本锁定 -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring-boot.version}</version>
+                <scope>import</scope>
+                <type>pom</type>
+            </dependency>
+
+            <!-- hutool 工具包 -->
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-extra</artifactId>
+                <version>${hutool.version}</version>
+            </dependency>
+
+            <!-- druid - 解析 sql 脚本，以及数据库连接池 -->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid</artifactId>
+                <version>${druid.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+</project>
