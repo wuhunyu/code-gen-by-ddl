@@ -18,6 +18,7 @@ codegenbyddl:
     "tinyint": "Integer",
     "smallint": "Integer",
     "int": "Integer",
+    "integer": "Integer",
     "bigint": "Long",
     "char": "String",
     "varchar": "String",
@@ -26,7 +27,8 @@ codegenbyddl:
     "timestamp": "LocalDateTime",
     "decimal": "BigDecimal",
     "text": "String",
-    "json": "String"
+    "json": "String",
+    "boolean": "Boolean"
   }
   # 默认属性配置
   configuration:
