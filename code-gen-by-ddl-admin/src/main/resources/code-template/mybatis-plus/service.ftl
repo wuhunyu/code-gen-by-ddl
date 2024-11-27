@@ -7,7 +7,7 @@ package ${entityTemplate.packageName}.${entityTemplate.moduleName}.service;
  * @date ${entityTemplate.createDatetime}
  **/
 
-public interface ${entityTemplate.className}Service extends IService<${entityTemplate.className}> {
+public interface ${entityTemplate.className}${entityTemplate.suffix}Service extends IService<${entityTemplate.className}> {
 
 
 

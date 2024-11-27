@@ -7,10 +7,13 @@ package ${entityTemplate.packageName}.${entityTemplate.moduleName}.service.impl;
  * @date ${entityTemplate.createDatetime}
  **/
 
-@Service("${entityTemplate.camelCaseName}Service")
+<#if entityTemplate.suffix??>
+@DataSourceScope(DataScope.${entityTemplate.suffix})
+</#if>
+@Service("${entityTemplate.camelCaseName}${entityTemplate.suffix}Service")
 @Slf4j
 @RequiredArgsConstructor
-public class ${entityTemplate.className}ServiceImpl extends ServiceImpl<${entityTemplate.className}Mapper, ${entityTemplate.className}> implements ${entityTemplate.className}Service {
+public class ${entityTemplate.className}ServiceImpl extends ServiceImpl<${entityTemplate.className}${entityTemplate.suffix}Mapper, ${entityTemplate.className}${entityTemplate.suffix}> {
 
 
 

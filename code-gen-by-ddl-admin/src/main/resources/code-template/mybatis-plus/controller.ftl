@@ -11,9 +11,9 @@ package ${entityTemplate.packageName}.${entityTemplate.moduleName}.controller;
 @RestController
 @RequestMapping("/${entityTemplate.snakeCaseName}")
 @RequiredArgsConstructor
-public class ${entityTemplate.className}Controller {
+public class ${entityTemplate.className}${entityTemplate.suffix}Controller {
 
-    private final ${entityTemplate.className}Service ${entityTemplate.camelCaseName}Service;
+    private final ${entityTemplate.className}${entityTemplate.suffix}Service ${entityTemplate.camelCaseName}${entityTemplate.suffix}Service;
 
 
 

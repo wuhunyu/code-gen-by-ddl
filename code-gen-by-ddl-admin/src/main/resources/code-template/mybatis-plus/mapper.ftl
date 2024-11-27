@@ -7,8 +7,10 @@ package ${entityTemplate.packageName}.${entityTemplate.moduleName}.mapper;
  * @date ${entityTemplate.createDatetime}
  **/
 
-@Mapper
-public interface ${entityTemplate.className}Mapper extends BaseMapper<${entityTemplate.className}> {
+<#if entityTemplate.suffix??>
+@DataSourceScope(DataScope.${entityTemplate.suffix})
+</#if>
+public interface ${entityTemplate.className}${entityTemplate.suffix}Mapper extends BaseMapper<${entityTemplate.className}> {
 
 
 

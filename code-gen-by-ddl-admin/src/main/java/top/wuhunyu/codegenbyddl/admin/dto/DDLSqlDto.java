@@ -63,4 +63,10 @@ public class DDLSqlDto implements Serializable {
     @Nullable
     private String createDatetime;
 
+    /**
+     * 后缀
+     */
+    @Nullable
+    private String suffix;
+
 }

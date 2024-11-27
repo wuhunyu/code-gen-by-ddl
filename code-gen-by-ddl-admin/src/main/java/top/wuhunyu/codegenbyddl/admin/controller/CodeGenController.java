@@ -51,6 +51,7 @@ public class CodeGenController {
                 ddlSqlDto.getModuleName(),
                 ddlSqlDto.getAuthor(),
                 ddlSqlDto.getTablePrefix(),
+                ddlSqlDto.getSuffix(),
                 ddlSqlDto.getCreateDatetime(),
                 configurationProperty
         );

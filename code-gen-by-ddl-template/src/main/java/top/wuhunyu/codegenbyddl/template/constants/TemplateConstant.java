@@ -47,19 +47,25 @@ public final class TemplateConstant {
     public static final String CONTROLLER_FILE = "controller.ftl";
 
     /**
+     * convert 转换器
+     */
+    public static final String CONVERT_FILE = "convert.ftl";
+
+    /**
      * 模板文件集合
      */
     public static final Set<String> TEMPLATE_NAMES;
 
     static {
         // 记录所有的模板文件名称
-        Set<String> set = new HashSet<String>(6) {{
+        Set<String> set = new HashSet<String>(7) {{
             add(ENTITY_FILE);
             add(MAPPER_INTERFACE_FILE);
             add(MAPPER_XML_FILE);
             add(SERVICE_FILE);
             add(SERVICE_IMPL_FILE);
             add(CONTROLLER_FILE);
+            add(CONVERT_FILE);
         }};
         // 转成不可变 set
         TEMPLATE_NAMES = Collections.unmodifiableSet(set);

@@ -109,7 +109,9 @@ public class CodeGenServiceImpl implements CodeGenService {
                 userConfigurationDto == null || StringUtils.isBlank(userConfigurationDto.getCreateDatetime()) ?
                         DateUtil.formatDatetime(configurationProperty.getCreateDateFormat()) :
                         userConfigurationDto.getCreateDatetime(),
-                sqlTableInfo.getTableComment()
+                sqlTableInfo.getTableComment(),
+                userConfigurationDto == null || StringUtils.isBlank(userConfigurationDto.getSuffix()) ?
+                        "" : userConfigurationDto.getSuffix()
         );
         // 字段信息
         List<SqlFiledInfoDto> sqlFiledInfos = sqlDataInfoDto.getSqlFiledInfos();

@@ -54,6 +54,11 @@ public class TemplateVo implements Serializable {
     private String controller;
 
     /**
+     * convert 转换器 解析结果
+     */
+    private String convert;
+
+    /**
      * 根据 模板名称 给 字段 赋值
      *
      * @param templateName 模板名称
@@ -82,6 +87,9 @@ public class TemplateVo implements Serializable {
                 break;
             case CONTROLLER_FILE:
                 this.controller = value;
+                break;
+            case CONVERT_FILE:
+                this.convert = value;
                 break;
             default:
                 break;

@@ -43,6 +43,11 @@ public class UserConfigurationDto implements Serializable {
     private String tablePrefix;
 
     /**
+     * 后缀
+     */
+    private String suffix;
+
+    /**
      * 创建日期时间(yyyy-MM-dd HH:mm:dd)
      */
     private String createDatetime;
@@ -59,7 +64,7 @@ public class UserConfigurationDto implements Serializable {
      * @return 用户配置 属性
      */
     public static UserConfigurationDto of(String packageName, String moduleName, String authorName, String tablePrefix,
-                                          String createDatetime, ConfigurationProperty defaultProperty) {
+                                          String suffix, String createDatetime, ConfigurationProperty defaultProperty) {
         UserConfigurationDto userConfigurationDto = new UserConfigurationDto();
         // 包名
         userConfigurationDto.setPackageName(StringUtils.isBlank(packageName) ?
@@ -73,6 +78,9 @@ public class UserConfigurationDto implements Serializable {
         // 表前缀
         userConfigurationDto.setTablePrefix(StringUtils.isBlank(tablePrefix) ?
                 "" : tablePrefix);
+        // 后缀
+        userConfigurationDto.setSuffix(StringUtils.isBlank(suffix) ?
+                "" : suffix);
         // 创建日期
         userConfigurationDto.setCreateDatetime(StringUtils.isBlank(createDatetime) ?
                 "" : createDatetime);

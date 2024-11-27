@@ -97,6 +97,12 @@ public class EntityTemplateDto implements Serializable {
     private String comment;
 
     /**
+     * 后缀
+     */
+    @Nullable
+    private String suffix;
+
+    /**
      * 构造 EntityTemplateDto 对象
      *
      * @param packageName      包名
@@ -111,7 +117,7 @@ public class EntityTemplateDto implements Serializable {
      */
     public static EntityTemplateDto of(String packageName, String moduleName, String sourceTableName,
                                        String tableName, String authorName, Boolean singlePrimaryKey,
-                                       String createDatetime, String comment) {
+                                       String createDatetime, String comment, String suffix) {
         // 构造 各种形式的命名
         // 驼峰命名(首字母大写)
         String className = underlineCase2BigCamelCase(tableName);
@@ -131,8 +137,8 @@ public class EntityTemplateDto implements Serializable {
                 generateUniqueId(),
                 singlePrimaryKey,
                 createDatetime,
-                comment
-        );
+                comment,
+                suffix);
     }
 
 }
