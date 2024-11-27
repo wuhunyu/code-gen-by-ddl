@@ -13,7 +13,7 @@ package ${entityTemplate.packageName}.${entityTemplate.moduleName}.service.impl;
 @Service("${entityTemplate.camelCaseName}${entityTemplate.suffix}Service")
 @Slf4j
 @RequiredArgsConstructor
-public class ${entityTemplate.className}ServiceImpl extends ServiceImpl<${entityTemplate.className}${entityTemplate.suffix}Mapper, ${entityTemplate.className}${entityTemplate.suffix}> {
+public class ${entityTemplate.className}Service extends ServiceImpl<${entityTemplate.className}${entityTemplate.suffix}Mapper, ${entityTemplate.className}${entityTemplate.suffix}> {
 
 
 

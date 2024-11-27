@@ -10,7 +10,7 @@ package ${entityTemplate.packageName}.${entityTemplate.moduleName}.mapper;
 <#if entityTemplate.suffix??>
 @DataSourceScope(DataScope.${entityTemplate.suffix})
 </#if>
-public interface ${entityTemplate.className}${entityTemplate.suffix}Mapper extends BaseMapper<${entityTemplate.className}> {
+public interface ${entityTemplate.className}${entityTemplate.suffix}Mapper extends BaseMapper<${entityTemplate.className}${entityTemplate.suffix}> {
 
 
 
