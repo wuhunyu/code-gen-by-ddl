@@ -8,7 +8,7 @@ package ${entityTemplate.packageName}.${entityTemplate.moduleName}.entity;
  **/
 
 <#if entityTemplate.suffix?has_content && entityTemplate.suffix == "V7">
-@TableName("CommonConstants.TEMP_TABLE_PREFIX + ${entityTemplate.sourceTableName}")
+@TableName(CommonConstants.TEMP_TABLE_PREFIX + "${entityTemplate.sourceTableName}")
 <#else>
 @TableName("${entityTemplate.sourceTableName}")
 </#if>
