@@ -7,7 +7,11 @@ package ${entityTemplate.packageName}.${entityTemplate.moduleName}.entity;
  * @date ${entityTemplate.createDatetime}
  **/
 
+<#if entityTemplate.suffix?has_content && entityTemplate.suffix == "V7">
+@TableName("CommonConstants.TEMP_TABLE_PREFIX + ${entityTemplate.sourceTableName}")
+<#else>
 @TableName("${entityTemplate.sourceTableName}")
+</#if>
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
